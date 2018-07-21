@@ -1,0 +1,68 @@
+<!-- top-area Start -->
+<header class="top-area">
+  <div class="header-area">
+    <!-- Start Navigation bootsnav adds cool font -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed bg-light bootsnav">
+
+      <div class="container">
+
+        <!-- Start Header Navigation -->
+        <!-- <span class="d-none d-lg-block" style="text-align:center"> -->
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2 navbar-collapse" style="max-width: 8%; padding-right: 20px" src="../../assets/about/LOL.jpg"
+          alt="" [routerLink]="['']">
+        <!-- </span> -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+            <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" [routerLink]="['']">Kim Ngo</a>
+        </div>
+        <!--/.navbar-header-->
+
+        <!-- End Header Navigation -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+          <ul class="nav navbar-nav navbar-left">
+            <li class=" smooth-menu active"></li>
+            <li class="smooth-menu">
+              <a routerLink="/education">education</a>
+            </li>
+            <li class="smooth-menu">
+              <a [routerLink]="['skills']">skills</a>
+            </li>
+            <li class="smooth-menu">
+              <a>experience</a>
+            </li>
+            <li class="smooth-menu">
+              <a>profile</a>
+            </li>
+            <li class="smooth-menu">
+              <a>portfolio</a>
+            </li>
+            <li class="smooth-menu">
+              <a>clients</a>
+            </li>
+            <li class="smooth-menu">
+              <a>contact</a>
+            </li>
+          </ul>
+          <!--/.nav -->
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!--/.container-->
+    </nav>
+    <!--/nav-->
+    <!-- End Navigation -->
+  </div>
+  <!--/.header-area-->
+
+  <div class="clearfix"></div>
+
+</header>
+<!-- /.top-area-->
+<!-- top-area End -->
+
+<router-outlet>
+</router-outlet>
