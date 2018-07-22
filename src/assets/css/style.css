@@ -141,7 +141,13 @@ nav.navbar.bootsnav ul.nav > li > a {
 nav.navbar.bootsnav ul.nav > li > a {padding: 35px 20px;}
 nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus,nav.navbar.bootsnav ul.nav > li.active>a{color: #d92cf9;}
 
+nav.navbar.bootsnav ul.nav > li > button {padding: 35px 20px;}
+nav.navbar.bootsnav ul.nav > li > button:hover,nav.navbar.bootsnav ul.nav > li > a:focus,nav.navbar.bootsnav ul.nav > li.active>button{color: #d92cf9;}
+
 nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
+    content: "";
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > button.dropdown-toggle:after {
     content: "";
 }
 nav.navbar.bootsnav ul.nav > li.dropdown span {
@@ -150,6 +156,10 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
 }
 .sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a {color:#6a708e;}
 .sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:hover,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:focus,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li.active>a{color: #d92cf9;}
+/*.nav li*/
+
+.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > button {color:#6a708e;}
+.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > button:hover,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > button:focus,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li.active>button{color: #d92cf9;}
 /*.nav li*/
 
 

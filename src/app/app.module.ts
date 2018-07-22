@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
@@ -15,13 +16,19 @@ import { EducationComponent } from './education/education.component';
 import { SkillsComponent } from './skills/skills.component';
 
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatButtonModule} from '@angular/material/button';
+
 import { ExperienceComponent } from './experience/experience.component';
 import { ProfileComponent } from './profile/profile.component';
+import { BlogComponent } from './blog/blog.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'education', component: EducationComponent },
   { path: 'skills', component: SkillsComponent },
+  { path: 'profile', component: ProfileComponent},  //TODO: Change to profile link
+  { path: 'experience', component: ExperienceComponent},  
+  { path: 'blog', component: BlogComponent},
 ];
 
 @NgModule({
@@ -31,7 +38,8 @@ const routes: Routes = [
     EducationComponent,
     SkillsComponent,
     ExperienceComponent,
-    ProfileComponent
+    ProfileComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule, AngularFontAwesomeModule,
@@ -39,7 +47,7 @@ const routes: Routes = [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireDatabaseModule,
     RouterModule.forRoot(routes),
-    MatProgressBarModule
+    MatProgressBarModule, FormsModule, MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
