@@ -8,12 +8,13 @@
 
         <!-- Start Header Navigation -->
         <!-- <span class="d-none d-lg-block" style="text-align:center"> -->
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2 navbar-collapse" style="max-width: 8%; padding-right: 20px" src="../../assets/about/LOL.jpg"
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2 navbar-collapse collapse" style="max-width: 8%; padding-right: 20px" src="../../assets/about/LOL.jpg"
           alt="" [routerLink]="['']">
         <!-- </span> -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-            <i class="fa fa-bars"></i>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" style="max-height: 45px" (click)="changeMenu()">
+            <!-- <i class="fa fa-bars"></i> -->
+            <mat-icon style="color: #d92cf9">menu</mat-icon>
           </button>
           <a class="navbar-brand" [routerLink]="['']">Kim Ngo</a>
         </div>
@@ -23,30 +24,56 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-          <ul class="nav navbar-nav navbar-left">
+          <ul class="nav navbar-nav navbar-left" *ngIf="open">
             <li class=" smooth-menu active"></li>
             <li class="smooth-menu">
-              <button routerLink="/education">education</button>
+              <button routerLink="/education" data-toggle="collapse" data-target="#navbar-menu" (click)="changeMenu()">education</button>
             </li>
             <li class="smooth-menu">
-              <button class = "uppercase" [routerLink]="['skills']"> skills</button>
+              <button class = "uppercase" [routerLink]="['skills']" data-toggle="collapse" data-target="#navbar-menu" (click)="changeMenu()"> skills</button>
             </li>
             <li class="smooth-menu">
-              <button [routerLink]="['experience']">experience</button>
+              <button [routerLink]="['experience']" data-toggle="collapse" data-target="#navbar-menu" (click)="changeMenu()">experience</button>
             </li>
             <li class="smooth-menu">
-              <button>profile</button>
+              <button data-toggle="collapse" data-target="#navbar-menu" (click)="changeMenu()">profile</button>
             </li>
             <li class="smooth-menu">
-              <button [routerLink]="['blog']">Blog</button>
+              <button [routerLink]="['blog']" data-toggle="collapse" data-target="#navbar-menu" (click)="changeMenu()">Blog</button>
             </li>
             <li class="smooth-menu">
-              <button>Research</button>
+              <button data-toggle="collapse" data-target="#navbar-menu" (click)="changeMenu()">Research</button>
             </li>
             <li class="smooth-menu">
-              <button [routerLink]="['profile']">contact</button>
+              <button [routerLink]="['profile']" data-toggle="collapse" data-target="#navbar-menu" (click)="changeMenu()">contact</button>
             </li>
           </ul>
+
+          <!--If the menu is not shrunk-->
+          <ul class="nav navbar-nav navbar-left" *ngIf="!open">
+              <li class=" smooth-menu active"></li>
+              <li class="smooth-menu">
+                <button routerLink="/education" >education</button>
+              </li>
+              <li class="smooth-menu">
+                <button class = "uppercase" [routerLink]="['skills']"> skills</button>
+              </li>
+              <li class="smooth-menu">
+                <button [routerLink]="['experience']" >experience</button>
+              </li>
+              <li class="smooth-menu">
+                <button >profile</button>
+              </li>
+              <li class="smooth-menu">
+                <button [routerLink]="['blog']" >Blog</button>
+              </li>
+              <li class="smooth-menu">
+                <button >Research</button>
+              </li>
+              <li class="smooth-menu">
+                <button [routerLink]="['profile']" >contact</button>
+              </li>
+            </ul>
           <!--/.nav -->
         </div>
         <!-- /.navbar-collapse -->

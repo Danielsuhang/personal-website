@@ -17,6 +17,7 @@ import { SkillsComponent } from './skills/skills.component';
 
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 import { ExperienceComponent } from './experience/experience.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -47,7 +48,7 @@ const routes: Routes = [
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireDatabaseModule,
     RouterModule.forRoot(routes),
-    MatProgressBarModule, FormsModule, MatButtonModule
+    MatProgressBarModule, FormsModule, MatButtonModule, MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
