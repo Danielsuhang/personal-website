@@ -20,16 +20,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 
 import { ExperienceComponent } from './experience/experience.component';
-import { ProfileComponent } from './profile/profile.component';
-import { BlogComponent } from './blog/blog.component';
+import { BlogComponent } from './research/blog.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'education', component: EducationComponent },
   { path: 'skills', component: SkillsComponent },
-  { path: 'profile', component: ProfileComponent},  //TODO: Change to profile link
   { path: 'experience', component: ExperienceComponent},  
-  { path: 'blog', component: BlogComponent},
+  { path: 'research', component: BlogComponent},
 ];
 
 @NgModule({
@@ -39,7 +37,6 @@ const routes: Routes = [
     EducationComponent,
     SkillsComponent,
     ExperienceComponent,
-    ProfileComponent,
     BlogComponent
   ],
   imports: [

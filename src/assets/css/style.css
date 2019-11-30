@@ -339,9 +339,27 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 --------------------------------------*/
 
 .education {
-    background:  #f9fbfd;
-    padding-top:  50px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    position:relative; 
+    z-index: 1; 
+    background-size:cover;
+    background-position: center;
+    height:890px;
 }
+.education:before {
+    position:absolute;
+    content: " ";
+    top:0;
+    left:0;
+    opacity:.2;
+    background:url(../about/UNC-background.jpg)no-repeat center center;
+    z-index:-1;
+    width:100%;
+    height:100%;
+}
+
 .education-horizontal-timeline {
     padding: 80px 0;
 }
@@ -349,10 +367,27 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 /*.education-horizontal-timeline*/
 .education-horizontal-timeline .col-sm-4 {padding:0 2px;}
 
-.single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
+.single-horizontal-timeline .experience-time h3{
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #000000;
+    opacity: 1.0;
+}
+.single-horizontal-timeline .experience-time h2{
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #000000;
+    opacity: 1.0;
+}
+.single-horizontal-timeline .experience-time h4{
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #000000;
+    opacity: 1.0;
+}
 .single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
 .single-horizontal-timeline .timeline-content h5 {margin: 15px 0;}
-.single-horizontal-timeline p {color: #999fb3;max-width: 335px;}
+.single-horizontal-timeline p {color: #00030c;max-width: 335px;}
 
 /*.timeline-horizontal-border*/
 .timeline-horizontal-border {
@@ -451,7 +486,48 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .experience {
     padding: 50px 0 100px;
     border-top: 1px solid #e5ebf2;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    position:relative; 
+    z-index: 1; 
+    background-size:cover;
+    background-position: center;
+    height:890px;
 }
+.experience:before {
+    position:absolute;
+    content: " ";
+    top:0;
+    left:0;
+    opacity: 0.2;
+    background:url(../about/UNC.png)no-repeat center center;
+    z-index:-1;
+    width:100%;
+    height:100%;
+}
+
+/* .education {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    position:relative; 
+    z-index: 1; 
+    background-size:cover;
+    background-position: center;
+    height:890px;
+}
+.education:before {
+    position:absolute;
+    content: " ";
+    top:0;
+    left:0;
+    opacity:.2;
+    background:url(../about/UNC-background.jpg)no-repeat center center;
+    z-index:-1;
+    width:100%;
+    height:100%;
+} */
 .experience-content {padding-top: 100px;}
 .single-timeline-box {margin-bottom: 75px;}
 
